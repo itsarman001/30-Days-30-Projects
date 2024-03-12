@@ -1,0 +1,104 @@
+:root {
+    --primary: #222831;
+    --secondary: #31363F;
+    --correct: #016A70;
+    --inCorrect: #FF2E63;
+    --accent: #76ABAE;
+    --light: #EEEEEE;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html,
+body {
+    height: 100vh;
+    width: 100%;
+    background: #222831;
+    background: radial-gradient(at left top, var(--correct),  var(--secondary));
+    background-image: url("blob-scene-haikei.svg");
+    color: var(--light);
+
+    background-repeat: no-repeat;
+    background-position:  center;
+    background-size: cover;
+    /* to center card */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Card */
+.card {
+    max-width: 600px;
+    width: 70%;
+    padding: 2rem;
+    border-radius: 1rem;
+    background-color: rgba(255, 255, 255, .1);
+    backdrop-filter: blur(1rem);
+    border: 1px solid var(--light);
+    box-shadow: 10px 10px rgba(255,255, 255, .2);
+    
+}
+
+.title {
+    font-weight: 600;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--light);
+    padding-bottom: .5rem ;
+}
+
+.question {
+    margin: .5rem 0 1rem;
+    font-size: 1.2rem;
+}
+
+.options {
+    width: 100%;
+    font-size: 1rem;
+    display: block;
+    margin: .5rem 0;
+    padding: .5rem;
+    background-color: transparent;
+    border: 1px solid var(--light);
+    outline: none;
+    color: var(--light);
+    transition: all ease .2s;
+}
+
+.options:hover:not([disabled]) {
+    background-color: var(--accent);
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.nextBtn {
+    display: block;
+    margin: 1.5rem auto 0;
+    padding: .6rem 1.4rem;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: var(--accent);
+    color: var(--primary);
+    border: none;
+    border-radius: 1.5rem;
+    transition: all ease .5s;
+}
+
+.nextBtn:hover {
+    background-color: var(--correct);
+    color: var(--light);
+}
+
+.correct {
+    background-color: var(--correct);
+}
+
+.inCorrect {
+    background-color: var(--inCorrect);
+}
