@@ -1,0 +1,89 @@
+:root {
+    --primary: #222831;
+    --secondary: #393E46;
+    --lt-accent: #0066ffde;
+    --accent: #002aff;
+    --light: #EEEEEE;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100vh;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    background-image: url("background.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: var(--light);
+}
+
+.container {
+    padding: 1rem 2rem;
+}
+
+.container h2 {
+    margin-top: 20%;
+    color: var(--light);
+    font-size: 2rem;
+}
+
+.container .passDisplay {
+    height: 3rem;
+    width: 22rem;
+    margin: 1.1rem 0 .5rem;
+    padding: 1rem .5rem;
+    background-color: rgba(255, 255, 255, .2);
+    opacity: .9;
+    border-radius: .7rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container .passDisplay input {
+    font-size: 1.1rem;
+    width: 90%;
+    height: 3rem;
+    background-color: transparent;
+    color: var(--light);
+    outline: none;
+    border: none;
+}
+
+
+.container .passDisplay input::placeholder {
+    color: var(--light);
+    opacity: 1; /* Firefox */
+  }
+
+.container .passDisplay button {
+    background: transparent;
+    border: none;
+}
+
+.alert {
+    margin: 0 0 1.1rem .5rem;
+    font-size: .9rem;
+}
+
+.generate {
+    font-size: 1rem;
+    padding: .6rem 1rem;
+    border-radius: .7rem;
+    border: none;
+    outline: none;
+    background-color: var(--lt-accent);
+    color: var(--light);
+    transition: all ease .3s;
+}
+
+.generate:hover {
+    background-color: var(--accent);
+}
