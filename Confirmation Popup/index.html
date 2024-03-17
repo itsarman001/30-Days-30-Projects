@@ -4,32 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Page Title -->
-    <title>ToDo App</title>
+    <!-- Title -->
+    <title>Confirmation Popup</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-    <!-- Css -->
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="checkbox.css">
 </head>
 
 <body>
-    <main class="app-container">
-        <h2 class="app-title">ToDo App</h2>
-        <div class="userInput-wrapper">
-            <input type="text" id="userInput" max-length="60">
-            <button>Add</button>
+    <main>
+        <button id="open" class="btn" title="Subscribe">Subscribe</button>
+        <div class="popup" id="popup">
+            <img src="tick.png" alt="Confirmation img">
+            <h2 class="title">"Thank You for Subscribing"</h2>
+            <p class="sub-title">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem, maxime!</p>
+            <button id="close" class="btn" title="Close Popup">CLOSE</button>
         </div>
-        <ul class="taskWrapper">
-            <!-- all the task will appear here -->
-        </ul>
     </main>
 
+    <!-- Script -->
     <script src="script.js"></script>
 </body>
 
