@@ -3,6 +3,7 @@
     --secondary: #31363F;
     --green: #016A70;
     --red: #FF2E63;
+    --lt-red: #f6537c;
     --accent: #76ABAE;
     --light: #EEEEEE;
 }
@@ -39,11 +40,12 @@ body {
 
 .app-container {
     width: 90%;
-    max-width: ;
+    height: 90vh;
+    overflow: hidden;
     padding: 1rem;
     border: 1px solid var(--light);
     border-radius: 1rem;
-    background-color: rgba(255, 525, 255, 0.03);
+    background-color: rgba(255, 525, 255, .12);
     backdrop-filter: blur(10px);
 }
 
@@ -54,14 +56,14 @@ body {
     border-bottom: 1px solid var(--light);
 }
 
-.userInput {
-    border: 1px solid var(--light);
+.userInput-wrapper {
+    /* border: 1px solid var(--light); */
     height: 3rem;
     margin: 1rem 0;
     position: relative;
 }
 
-.userInput input {
+.userInput-wrapper input {
     background-color: var(--light);
     color: var(--dark);
     font-size: 1.2rem;
@@ -73,12 +75,12 @@ body {
     border-radius: 2rem;
 }
 
-.userInput input:focus {
+.userInput-wrapper input:focus {
     border: none;
     outline: none;
 }
 
-.userInput button {
+.userInput-wrapper button {
     width: 25%;
     height: 100%;
     background-color: var(--accent);
@@ -91,17 +93,24 @@ body {
     z-index: 1;
 }
 
-.userInput button:hover {
+.userInput-wrapper button:hover {
     background-color: var(--green);
     font-weight: 600;
 }
 
-.userInput button:active { background-color: #EEEEEE;color: var(--primary);}
+.userInput-wrapper button:active { background-color: #EEEEEE;color: var(--primary);}
+
+.taskWrapper {
+    max-height: 80%;
+    overflow-y: scroll;
+}
+
+.taskWrapper::-webkit-scrollbar { display: none;}
 
 .taskWrapper .task {
     display: flex;
     align-items: center;
-    border: 1px solid var(--light);
+    /* border: 1px solid var(--light); */
     height: 3rem;
     
 }
@@ -115,12 +124,26 @@ body {
 .task label .task-desc {
   height: 3rem;
   padding: .1rem .5rem;
-  font-size: 1.2rem;
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
   color: var(--light);
-  overflow-y: auto;
+  overflow: hidden;
 }
 
 .task .trashBtn {
-  width: 10%;
-  height: 100%;
+  margin-left: .5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 100%;
+  background-color: var(--lt-red);
+  border: 1px solid var(--light);
+}
+
+.task .trashBtn:hover { background-color: var(--red);}
+
+.task .trashBtn:active { transform: scale(.9); }
+
+@media only screen and (min-width: 768px) {
+    .app-container { width: 600px;}
 }

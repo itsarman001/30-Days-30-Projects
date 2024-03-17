@@ -13,25 +13,16 @@
 <body>
     <main class="app-container">
         <h2 class="app-title">ToDo App</h2>
-        <div class="userInput">
-            <input type="text">
-            <button>Add Task</button>
+        <div class="userInput-wrapper">
+            <input type="text" id="userInput" max-length="60">
+            <button>Add</button>
         </div>
         <ul class="taskWrapper">
-            <li class="task">
-                <label style="border: 1px solid red;">
-                    <span class="container">
-                        <input type="checkbox">
-                        <div class="checkmark"></div>
-                    </span>
-                    <span class="task-desc"></span>
-                </label>
-                <button class="trashBtn">
-                    <img src="assets/trash.svg" alt="trash">
-                </button>
-            </li>
+            <!-- all the task will appear here -->
         </ul>
     </main>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
