@@ -1,46 +1,60 @@
-let taskWrapper = document.querySelector(".taskWrapper")
+let taskWrapper = document.querySelector(".taskWrapper");
 let userInput = document.getElementById("userInput");
 
 document.querySelector(".userInput-wrapper button").addEventListener('click', addTask);
 
 function addTask() {
-    console.log("Button Clicked")
-    let userInput = document.getElementById("userInput");
-    let task = document.createElement("li");
-    task.classList.add("task");
-    task.innerHTML = `
-    <label>
+    let task = {
+        content: userInput.value,
+        completed: false
+    };
+    addTaskToDOM(task);
+    saveData();
+    userInput.value = "";
+}
+
+function addTaskToDOM(task) {
+    let taskElement = document.createElement("li");
+    taskElement.classList.add("task");
+    taskElement.innerHTML = `
+    <label class="${task.completed ? 'checked' : ''}">
         <span class="container">
-            <input type="checkbox">
+            <input type="checkbox" ${task.completed ? 'checked' : ''}>
             <div class="checkmark"></div>
         </span>
-        <span class="task-desc">${userInput.value}</span>
+        ${task.content}
     </label>
     <button class="trashBtn">
         <img src="assets/trash.svg" alt="trash">
     </button>
-    `
-    taskWrapper.appendChild(task);
-    userInput.value = ""
-    saveData()
+    `;
+    taskWrapper.appendChild(taskElement);
 }
 
 function saveData() {
-    let storeData = localStorage.setItem("tasks", taskWrapper.innerHTML)
+    let tasks = Array.from(taskWrapper.children).map(taskElement => {
+        return {
+            content: taskElement.querySelector('label').textContent,
+            completed: taskElement.querySelector('input').checked
+        };
+    });
+    localStorage.setItem("tasks", JSON.stringify(tasks));
 }
 
 function getData() {
-    taskWrapper.innerHTML = localStorage.getItem("tasks")
+    let tasks = JSON.parse(localStorage.getItem("tasks"));
+    if (tasks) {
+        tasks.forEach(task => addTaskToDOM(task));
+    }
 }
 
-taskWrapper.addEventListener('click', (e)=>{
-    if(e.target.tagName === "LABLEL") {
+taskWrapper.addEventListener('click', (e) => {
+    if (e.target.tagName === "LABEL") {
         e.target.classList.toggle("checked");
     } else if (e.target.tagName === "IMG") {
         e.target.parentElement.parentElement.remove();
-    };
-    saveData()
+    }
+    saveData();
 }, false);
 
-
-getData()
+getData();

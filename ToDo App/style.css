@@ -118,17 +118,13 @@ body {
 }
 
 .task label {
-  width: 90%;
-  display: flex;
-  align-items: center;
-}
-
-.task label .task-desc {
   height: 3rem;
+  width: 90%;
   padding: .1rem .5rem;
   font-size: 1.8rem;
   display: flex;
   align-items: center;
+  gap: .5rem;
   color: var(--light);
   overflow: hidden;
 }
@@ -145,6 +141,10 @@ body {
 .task .trashBtn:hover { background-color: var(--red);}
 
 .task .trashBtn:active { transform: scale(.9); }
+
+.checked {
+    text-decoration: line-through;
+}
 
 @media only screen and (min-width: 768px) {
     .app-container { width: 600px;}
