@@ -1,0 +1,106 @@
+:root {
+    --dark: #222831;
+    --light: #EEEEEE;
+    --danger: #EE4266;
+    --fair: #B0C5A4;
+    --strong: #337357;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+html,
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--dark);
+    color: var(--light);
+    font-family: 'Poppins', sans-serif;
+}
+
+.weak { border-color: var(--danger); }
+.fair { border-color: var(--fair); }
+.strong { border-color: var(--strong); }
+
+main {
+    height: 100%;
+    width: 100%;   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.input-box {
+    height: 2.5rem;
+    width: 90%;
+    max-width: 300px;
+    display: flex;
+    align-items: center;
+}
+
+.input-box label {
+    position: relative;
+    width: 90%;
+    height: 100%;
+    margin-right: .5rem;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    padding-right: 15%;
+    text-indent: .5rem;
+    font-size: .9rem;
+    border-radius: .5rem;
+    border: 1px solid var(--light);
+    color: var(--light);
+    background-color: transparent;
+}
+
+.input-box input:focus {
+    outline: none;
+}
+
+.input-box input::placeholder {
+    color: var(--light);
+    text-indent: .5rem;
+    font-size: .9rem;
+}
+
+.input-box label i {
+    position: absolute;
+    top: 27%;
+    right: 5%;
+}
+
+.input-box button {
+    height: 100%;
+    width: 2.5rem;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    color: var(--strong);
+    background-color: transparent;
+    border: 1px solid var(--light);
+    transition: all ease .4s;
+}
+
+.input-box button:hover {
+    background-color: var(--light);
+    color: var(--strong);
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+
+.message {
+    width: 90%;
+    max-width: 300px;
+    margin-top: .3rem;
+    font-size: .8rem;
+
+    & p { width: 60%;}
+}
