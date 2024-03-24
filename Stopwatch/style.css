@@ -1,0 +1,79 @@
+/* Define the color scheme */
+:root {
+    --primary: #222831; /* Primary color for the background */
+    --secondary: #393E46; /* Secondary color for containers */
+    --light: #EEEEEE; /* Light color for text and borders */
+    --accent: #00ADB5; /* Accent color for interactive elements */
+}
+
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set the dimensions of the html and body elements */
+html,
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
+/* Style the main container */
+main {
+    height: 100%;
+    width: 100%;
+    background-color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Style the inner container */
+.container {
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 1rem 1.5rem;
+    border-radius: .8rem;
+    background-color: var(--secondary);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Style the stopwatch display */
+#stopwatch {
+    width: 100%;
+    color: var(--light);
+    text-align: center;
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 2.5rem;
+}
+
+/* Style the buttons */
+button {
+    height: 3rem;
+    width: 3rem;
+    margin: 0 .5rem;
+    background-color: var(--primary);
+    color: var(--light);
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 100%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .3);
+    transition: all ease .3s;
+}
+
+/* Style the buttons on hover */
+button:hover {
+    background-color: var(--accent);
+    color: var(--light);
+    box-shadow: 2px 2px 5px rgba(255, 255, 255, .3);
+}

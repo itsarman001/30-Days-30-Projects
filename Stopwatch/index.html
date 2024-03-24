@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title of the webpage -->
+    <title>Stopwatch</title>
+
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Link to the Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+
+    <!-- Link to the Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <main>
+        <!-- Container for the stopwatch and buttons -->
+        <div class="container">
+            <!-- Display for the stopwatch time -->
+            <div id="stopwatch">00 : 00 : 00</div>
+            <!-- Container for the control buttons -->
+            <div class="buttons">
+                <!-- Stop button with an icon -->
+                <button id="stopBtn" aria-label="Stop Stopwatch" type="button">
+                    <i class="fa-regular fa-circle-pause"></i>
+                </button>
+                <!-- Start button with an icon -->
+                <button id="startBtn" aria-label="Start Stopwatch" type="button">
+                    <i class="fa-regular fa-circle-play"></i>
+                </button>
+                <!-- Reset button with an icon -->
+                <button id="resetBtn" aria-label="Reset Stopwatch" type="button">
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+                </button>
+            </div>
+        </div>
+    </main>
+    <!-- Link to the external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+
+</html>
