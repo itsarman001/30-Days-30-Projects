@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --dark: #222831;
+    --light: #DDDDDD;
+    --blue: #30475E;
+    --red: #F05454;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--blue);
+    background: linear-gradient(to top right, var(--blue), var(--red), var(--dark));
+    color: var(--light);
+    font-family: 'Poppins', sans-serif;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 70%;
+    max-width: 450px;
+    max-height: 550px;
+    padding: 1rem;
+    border-radius: .5rem;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, .5);
+    background-color: var(--dark);
+}
+
+.title { text-align: center;}
+.title h2 {
+    text-decoration: underline;
+    margin-bottom: .5rem;
+}
+
+.user-inputs {
+    margin: 5% auto;
+    text-align: center;
+    padding: 1rem;
+}
+
+.btn, #close {
+    padding: .5rem 1rem;
+    margin: 10px;
+    background-color: transparent;
+    color: var(--light);
+    border: 1px solid var(--light);
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: all ease .2s;
+}
+
+.btn:hover, #close:hover {
+    background-color: var(--light);
+    color: var(--dark);
+}
+
+.btn:active, #close:active {
+    transform: scale(.9);
+    background-color: var(--light);
+    color: var(--dark);
+}
+
+#popup {
+    background-color: var(--blue);
+    color: var(--light);
+    padding: 2rem;
+    text-align: center;
+    border-radius: 1rem;
+    position: absolute;
+    top: -10%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(.1);
+    visibility: hidden;
+    transition: all ease .4s;
+    cursor: pointer;
+}
+
+.output {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+#close {
+    margin-top: 1rem;
+}
+
+.openPopup {
+    top: 50% !important;
+    transform: translate(-50%, -50%) scale(1) !important;
+    visibility: visible !important;
+}
