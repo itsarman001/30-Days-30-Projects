@@ -1,0 +1,42 @@
+/* CSS variables for colors */
+:root {
+    --primary: #EEEEEE;
+    --secondary: #31363F;
+    --accent: #76ABAE;
+    --text: #222831;
+}
+
+/* Dark mode CSS */
+.darkMode {
+    --primary: #222831;
+    --secondary: #717274;
+    --accent: #76ABAE;
+    --text: #EEEEEE;
+}
+
+/* Body styling */
+body {
+    background-color: var(--primary);
+    color: var(--text);
+    padding: 2rem 3rem;
+    transition: all ease .4s;
+}
+
+body p { width: 70%;}
+
+
+/* Button styling */
+body button {
+    background: var(--accent);
+    color: var(--text);
+    border: 1px solid var(--text);
+    padding: .5rem;
+    border-radius: 1rem;
+    font-weight: bold;
+}
+
+/* Header styling */
+body h1 {
+    color: var(--accent);
+    width: 70%;
+}
