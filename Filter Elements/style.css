@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.btn-cont, #list-cont  {
+    padding: .5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+button {
+    margin: .5rem;
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+    border: none;
+}
+
+#list-cont div {
+    padding: .5rem 1rem;
+    background-color: beige;
+    margin: .5rem;
+    border-radius: .5rem;
+    
+}
